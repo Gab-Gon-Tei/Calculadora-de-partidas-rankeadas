@@ -17,11 +17,13 @@ heroi.derrotas = ObterValorNumerico("Nem só de vitórias vive um herói, não �
 heroi.Calculadora();
 
 string[] ranks = { "Ferro", "Bronze", "Prata", "Ouro", "Diamante", "Lendário", "Imortal" };
-int[] limites = { 10, 20, 50, 80, 90, 100 };
+int[] limites = { 10, 20, 50, 80, 90, 101 };
+
+heroi.rank = "Imortal"; // Atribui inicialmente "Imortal"
 
 for (int i = 0; i < limites.Length; i++)
 {
-    if (heroi.saldo <= limites[i])
+    if (heroi.vitorias < limites[i])
     {
         heroi.rank = ranks[i];
         break;
